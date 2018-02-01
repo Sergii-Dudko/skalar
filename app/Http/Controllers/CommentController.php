@@ -17,17 +17,6 @@ class CommentController extends Controller
 
     public function create(Request $request)
     {
-//        $validator = Validator::make($request->all(), [
-//            'name' => 'required|max:30',
-//        ]);
-//
-//        if ($validator->fails()) {
-//            return redirect('/food')
-//                ->withInput()
-//                ->withErrors($validator);
-//        }
-
-        //var_dump($request);
         $comment = new Comment;
         $comment->user_name = $request->from;
         $comment->comment = $request->message;
