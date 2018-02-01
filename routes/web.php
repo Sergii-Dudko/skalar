@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/comments', 'CommentController@index');
+Route::post('/comments', 'CommentController@create');
